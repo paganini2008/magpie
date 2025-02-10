@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.doodler.common.jdbc.druid.DruidConfig,\
+  com.github.doodler.common.jdbc.JdbcConfig

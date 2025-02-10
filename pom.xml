@@ -1,0 +1,483 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.paganini2008.magpie</groupId>
+	<artifactId>magpie-framework-dependencies</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>21</java.version>
+		<springboot.version>3.3.8</springboot.version>
+		<springcloud.version>2023.0.5</springcloud.version>
+		<fastjson.version>1.2.74</fastjson.version>
+		<guava.version>31.1-jre</guava.version>
+		<magpie.backend.version>1.0.0-SNAPSHOT</magpie.backend.version>
+		<swagger.fox.version>2.9.2</swagger.fox.version>
+		<io.swagger>1.5.21</io.swagger>
+	</properties>
+
+	<modules>
+		<module>magpie-common-data</module>
+		<module>magpie-common-redis</module>
+		<module>magpie-common-log</module>
+		<module>magpie-common-jdbc</module>
+		<module>magpie-common-jpa</module>
+		<module>magpie-common-mybatis</module>
+		<module>magpie-common-i18n</module>
+		<module>magpie-common-id</module>
+		<module>magpie-common-security</module>
+		<module>magpie-common-oauth</module>
+		<module>magpie-common-swagger</module>
+		<module>magpie-common-feign</module>
+		<module>magpie-common-webmvc</module>
+		<module>magpie-common-messager</module>
+		<module>magpie-common-validation</module>
+		<module>magpie-common-ip</module>
+		<module>magpie-common-websocket</module>
+		<module>magpie-common-amqp</module>
+		<module>magpie-common-upms</module>
+		<module>magpie-common-cloud</module>
+		<module>magpie-common-cache</module>
+		<module>magpie-common-zookeeper</module>
+		<module>magpie-common-quartz</module>
+		<module>magpie-common-config</module>
+		<module>magpie-common-gateway</module>
+		<module>magpie-common-timeseries</module>
+		<module>magpie-common-traffic</module>
+		<module>magpie-common-transmitter</module>
+		<module>magpie-common-tx</module>
+		<module>magpie-common-hazelcast</module>
+		<module>magpie-common-elasticsearch</module>
+		<module>magpie-common-aws</module>
+		<module>magpie-common-webflux</module>
+		<module>magpie-common-scheduler</module>
+		<module>magpie-common-openfeign</module>
+		<module>magpie-common-grpc</module>
+		<module>magpie-example-client</module>
+	</modules>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${springcloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-data</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-redis</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-mybatis</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-i18n</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-id</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-security</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-log</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-swagger</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-feign</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-webmvc</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-validation</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-jdbc</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-jpa</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-ip</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>doodler-example-client</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-messager</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-websocket</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-amqp</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-upms</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-cloud</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-example-client</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-quartz</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-cache</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-zookeeper</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-config</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-gateway</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-timeseries</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-hazelcast</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-transmitter</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-elasticsearch</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-traffic</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-webflux</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-openfeign</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-grpc</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-scheduler</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-aws</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+			
+		    <dependency>
+				<groupId>com.github.paganini2008.magpie</groupId>
+				<artifactId>magpie-common-tx</artifactId>
+				<version>${magpie.backend.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.18.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.10.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.4.1</version>
+		</dependency>
+		        
+        <dependency>
+			<groupId>com.github.paganini2008</groupId> 
+			<artifactId>devtools-lang</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator-autoconfigure</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<profiles.active>dev</profiles.active>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>home-releases</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>home-snapshots</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>test</id>
+			<properties>
+				<profiles.active>test</profiles.active>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>home-releases</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>home-snapshots</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>prod</id>
+			<properties>
+				<profiles.active>prod</profiles.active>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>home-releases</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>home-snapshots</id>
+					<name>Local Nexus Repository</name>
+					<url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+</project>

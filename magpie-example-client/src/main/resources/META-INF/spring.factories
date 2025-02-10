@@ -1,0 +1,2 @@
+com.github.doodler.common.feign.RestClientCandidatesAutoConfiguration=\
+  com.github.doodler.common.example.client.RemoteExampleService
